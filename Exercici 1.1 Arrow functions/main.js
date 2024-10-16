@@ -54,7 +54,16 @@
 
 // NIVELL 1
 
-const potConduir = (edat) => edat >= 18 ? 'Pots conduir' : 'No pots conduir';
+// exercici 1
+// const potConduir = (edat) => edat >= 18 ? 'Pots conduir' : 'No pots conduir';
 
-console.log(potConduir(20)); 
-console.log(potConduir(16));
+// console.log(potConduir(20)); 
+// console.log(potConduir(16));
+
+// EXERCICI 2
+
+const majorNombre = (num1, num2) => num1 > num2 ? 'num1 és més gran' : 'num2 és més gran';
+
+console.log(majorNombre(10, 5));  // Sortida: num1 és més gran
+console.log(majorNombre(3, 8));   // Sortida: num2 és més gran
+
