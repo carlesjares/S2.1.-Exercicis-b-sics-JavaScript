@@ -50,3 +50,11 @@
 // }, 3000);
 
 
+// Exercici 1.2: Operador ternari
+
+// NIVELL 1
+
+const potConduir = (edat) => edat >= 18 ? 'Pots conduir' : 'No pots conduir';
+
+console.log(potConduir(20)); 
+console.log(potConduir(16));
