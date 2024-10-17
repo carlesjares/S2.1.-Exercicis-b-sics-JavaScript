@@ -112,12 +112,23 @@
 
 // NIVELL1
 // exercici 1 
-function processar(nombre, callback) {
-  callback(nombre);
+// function processar(nombre, callback) {
+//   callback(nombre);
+// }
+
+// function mostrarDoble(num) {
+//   console.log(`El doble de ${num} és ${num * 2}`);
+// }
+
+// processar(5, mostrarDoble); 
+
+// EXERCICI2
+function calculadora (nombre1,nombre2,callback){
+  callback(nombre1,nombre2);
 }
 
-function mostrarDoble(num) {
-  console.log(`El doble de ${num} és ${num * 2}`);
+function sumaNombres(num1,num2) {
+  console.log(`la suma de ${num1} y ${num2} es ${num1 + num2}`);
 }
 
-processar(5, mostrarDoble); 
+calculadora(8,32, sumaNombres);
