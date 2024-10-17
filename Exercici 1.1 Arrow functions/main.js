@@ -136,33 +136,46 @@
 // NIVELL 2
 // EXERCICI 3
 
-function esperarISaludar(nom, callback) {
-  setTimeout(() => {
-    callback(nom);
-  }, 2000); 
-}
+// function esperarISaludar(nom, callback) {
+//   setTimeout(() => {
+//     callback(nom);
+//   }, 2000); 
+// }
 
-function saludar(nom) {
-  console.log(`Hola, ${nom}!`);
-}
+// function saludar(nom) {
+//   console.log(`Hola, ${nom}!`);
+// }
 
-esperarISaludar("Anna", saludar);
+// esperarISaludar("Anna", saludar);
 
+// // EXERCICI 4
+
+// function processarElements(array, callback) {
+//   for (let i = 0; i < array.length; i++) {
+//     callback(array[i]);
+//   }
+// }
+
+// function mostrarElement(element) {
+//   console.log(`Element: ${element}`);
+// }
+
+// const elements = [1, 2, 3, 4, 5];
+// processarElements(elements, mostrarElement);
+
+// NIVELL 3
 // EXERCICI 4
 
-function processarElements(array, callback) {
-  for (let i = 0; i < array.length; i++) {
-    callback(array[i]);
-  }
+function processarCadena(cadena, callback) {
+  const cadenaTransformada = cadena.toUpperCase(); // Convertir la cadena a majúscules
+  callback(cadenaTransformada); // Invocar el callback amb la cadena transformada
 }
 
-function mostrarElement(element) {
-  console.log(`Element: ${element}`);
+function mostrarCadenaTransformada(cadena) {
+  console.log(`Cadena transformada: ${cadena}`);
 }
 
-const elements = [1, 2, 3, 4, 5];
-processarElements(elements, mostrarElement);
-
-
-
+// Exemple d'ús
+const cadenaOriginal = 'la classe de react ha començat';
+processarCadena(cadenaOriginal, mostrarCadenaTransformada);
 
