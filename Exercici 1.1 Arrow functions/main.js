@@ -50,6 +50,8 @@
 // }, 3000);
 
 
+
+
 // Exercici 1.2: Operador ternari
 
 // NIVELL 1
@@ -67,8 +69,11 @@
 // console.log(majorNombre(10, 5));  // Sortida: num1 és més gran
 // console.log(majorNombre(3, 8));   // Sortida: num2 és més gran
 
-// NIVELL 2 
 
+
+
+
+// NIVELL 2
 // EXERCICI 3
 
 let verificarNumero = (num) => 
@@ -77,3 +82,13 @@ let verificarNumero = (num) =>
 console.log(verificarNumero(10));  // Sortida: Positiu
 console.log(verificarNumero(-5));  // Sortida: Negatiu
 console.log(verificarNumero(0));   // Sortida: Zero
+
+let trobarMaxim = (a, b, c) => 
+  a > b 
+    ? (a > c ? a : c) 
+    : (b > c ? b : c);
+
+console.log(trobarMaxim(10, 5, 8));  // Sortida: 10
+console.log(trobarMaxim(3, 12, 9));  // Sortida: 12
+console.log(trobarMaxim(1, 4, 7));   // Sortida: 7
+
