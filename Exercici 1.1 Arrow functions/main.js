@@ -123,12 +123,53 @@
 // processar(5, mostrarDoble); 
 
 // EXERCICI2
-function calculadora (nombre1,nombre2,callback){
-  callback(nombre1,nombre2);
+// function calculadora (nombre1,nombre2,callback){
+//   callback(nombre1,nombre2);
+// }
+
+// function sumaNombres(num1,num2) {
+//   console.log(`la suma de ${num1} y ${num2} es ${num1 + num2}`);
+// }
+
+// calculadora(8,32, sumaNombres);
+
+// NIVELL 2
+// EXERCICI 3
+
+function esperarISaludar(nom, callback) {
+  setTimeout(() => {
+    callback(nom);
+  }, 2000); 
 }
 
-function sumaNombres(num1,num2) {
-  console.log(`la suma de ${num1} y ${num2} es ${num1 + num2}`);
+function saludar(nom) {
+  console.log(`Hola, ${nom}!`);
 }
 
-calculadora(8,32, sumaNombres);
+esperarISaludar("Anna", saludar);
+
+// EXERCICI 4
+
+// Callbacks amb arrays: Escriu una funció processarElements que accepti dos paràmetres: un array i una 
+// funció de callback. La funció processarElements ha d'invocar la funció de callback per cada element de l'array.
+function processarElements(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i]);
+  }
+}
+
+function mostrarElement(element) {
+  console.log(`Element: ${element}`);
+}
+
+const elements = [1, 2, 3, 4, 5];
+processarElements(elements, mostrarElement);
+// Sortida:
+// Element: 1
+// Element: 2
+// Element: 3
+// Element: 4
+// Element: 5
+
+
+
