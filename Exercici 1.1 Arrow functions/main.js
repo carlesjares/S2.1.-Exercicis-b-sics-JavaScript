@@ -62,8 +62,18 @@
 
 // EXERCICI 2
 
-const majorNombre = (num1, num2) => num1 > num2 ? 'num1 és més gran' : 'num2 és més gran';
+// const majorNombre = (num1, num2) => num1 > num2 ? 'num1 és més gran' : 'num2 és més gran';
 
-console.log(majorNombre(10, 5));  // Sortida: num1 és més gran
-console.log(majorNombre(3, 8));   // Sortida: num2 és més gran
+// console.log(majorNombre(10, 5));  // Sortida: num1 és més gran
+// console.log(majorNombre(3, 8));   // Sortida: num2 és més gran
 
+// NIVELL 2 
+
+// EXERCICI 3
+
+let verificarNumero = (num) => 
+  num > 0 ? 'Positiu' : num < 0 ? 'Negatiu' : 'Zero';
+
+console.log(verificarNumero(10));  // Sortida: Positiu
+console.log(verificarNumero(-5));  // Sortida: Negatiu
+console.log(verificarNumero(0));   // Sortida: Zero
