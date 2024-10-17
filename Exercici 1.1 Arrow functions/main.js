@@ -98,18 +98,26 @@
 // NIVELL 3
 // exercici 4
 
-const parOImpar = (numbers) => {
-  for (let i = 0; i < numbers.length; i++) {
-    console.log(numbers[i] % 2 === 0 ? `${numbers[i]} és parell` : `${numbers[i]} és imparell`);
-  }
-};
+// const parOImpar = (numbers) => {
+//   for (let i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i] % 2 === 0 ? `${numbers[i]} és parell` : `${numbers[i]} és imparell`);
+//   }
+// };
 
-const nums = [1, 2, 3, 4, 5, 6];
-parOImpar(nums);
-// Sortida:
-// 1 és imparell
-// 2 és parell
-// 3 és imparell
-// 4 és parell
-// 5 és imparell
-// 6 és parell
+// const nums = [1, 2, 3, 4, 5, 6];
+// parOImpar(nums);
+
+
+// EXERCICI 1.3 CALLBACKS
+
+// NIVELL1
+// exercici 1 
+function processar(nombre, callback) {
+  callback(nombre);
+}
+
+function mostrarDoble(num) {
+  console.log(`El doble de ${num} és ${num * 2}`);
+}
+
+processar(5, mostrarDoble); 
