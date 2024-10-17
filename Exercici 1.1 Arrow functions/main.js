@@ -76,19 +76,40 @@
 // NIVELL 2
 // EXERCICI 3
 
-let verificarNumero = (num) => 
-  num > 0 ? 'Positiu' : num < 0 ? 'Negatiu' : 'Zero';
+// let verificarNumero = (num) => 
+//   num > 0 ? 'Positiu' : num < 0 ? 'Negatiu' : 'Zero';
 
-console.log(verificarNumero(10));  // Sortida: Positiu
-console.log(verificarNumero(-5));  // Sortida: Negatiu
-console.log(verificarNumero(0));   // Sortida: Zero
+// console.log(verificarNumero(10));  // Sortida: Positiu
+// console.log(verificarNumero(-5));  // Sortida: Negatiu
+// console.log(verificarNumero(0));   // Sortida: Zero
 
-let trobarMaxim = (a, b, c) => 
-  a > b 
-    ? (a > c ? a : c) 
-    : (b > c ? b : c);
+// let trobarMaxim = (a, b, c) => 
+//   a > b 
+// ? (a > c ? a : c) 
+//     : (b > c ? b : c);
 
-console.log(trobarMaxim(10, 5, 8));  // Sortida: 10
-console.log(trobarMaxim(3, 12, 9));  // Sortida: 12
-console.log(trobarMaxim(1, 4, 7));   // Sortida: 7
+// console.log(trobarMaxim(10, 5, 8));  // Sortida: 10
+// console.log(trobarMaxim(3, 12, 9));  // Sortida: 1
+// console.log(trobarMaxim(1, 4, 7));   // Sortida: 7
 
+
+
+
+// NIVELL 3
+// exercici 4
+
+const parOImpar = (numbers) => {
+  for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i] % 2 === 0 ? `${numbers[i]} és parell` : `${numbers[i]} és imparell`);
+  }
+};
+
+const nums = [1, 2, 3, 4, 5, 6];
+parOImpar(nums);
+// Sortida:
+// 1 és imparell
+// 2 és parell
+// 3 és imparell
+// 4 és parell
+// 5 és imparell
+// 6 és parell
