@@ -214,27 +214,58 @@
 // 'objecte2', que sigui una còpia de 'objecte1' utilitzant l'operador spread.
 //  Canvia una propietat de 'objecte2' i comprova que 'objecte1' no ha canviat.
 
-const objecte1 = {
-  name: 'carles',
-  id: 1234,
-  product: 'barcelona activa',
-  exercici: 'copiant objectes'
-}
-const objecte2 = {...objecte1}
-// Modifiquem una propietat de objecte2
-objecte2.exercici = 'modicacio objecte';
-console.log(objecte1,objecte2)
+// const objecte1 = {
+//   name: 'carles',
+//   id: 1234,
+//   product: 'barcelona activa',
+//   exercici: 'copiant objectes'
+// }
+// const objecte2 = {...objecte1}
+// // Modifiquem una propietat de objecte2
+// objecte2.exercici = 'modicacio objecte';
+// console.log(objecte1,objecte2)
 
 
 // Exercici 4
 // Rest en Destructuring: Crea una array amb diversos elements. Utilitza destructuring i l'operador 
 // rest per a assignar els primers dos elements a variables, i després assignar la resta dels elements a una tercera variable.
 
-const numeros = [1, 2, 3, 4, 5, 6];
+// const numeros = [1, 2, 3, 4, 5, 6];
 
-const [primer, segon, ...rest] = numeros;
+// const [primer, segon, ...rest] = numeros;
 
-console.log(primer);
-console.log(segon);
-console.log(rest);
+// console.log(primer);
+// console.log(segon);
+// console.log(rest);
 
+
+// Nivell 3
+// Exercici 5
+// Spread en Funcions: Crea una funció que accepti tres arguments. Després, crea una array amb tres elements i 
+// crida la funció utilitzant l'operador spread amb aquesta array.
+
+function mostrarArguments(uno, dos, tres){
+  console.log(uno, dos, tres)
+}
+const array = [1, 2, 3];
+
+mostrarArguments(...array)
+
+// Exercici 6
+// Fusionant Objectes amb Spread: Crea dos objectes amb propietats diferents. Utilitza l'operador spread per a fusionar
+//  aquests dos objectes en un de nou.
+
+const objecte1 = {
+  email: 'gfjksfsd@gmail.com',
+  empresa: 'barcelona activa',
+ 
+}
+
+const objecte2 = {
+  name: 'pepe',
+  id: 7654,
+  exercici: 'fusionar objectes'
+}
+
+const fullobjecte = {...objecte1, ...objecte2};
+console.log(fullobjecte);
