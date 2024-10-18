@@ -166,16 +166,44 @@
 // NIVELL 3
 // EXERCICI 4
 
-function processarCadena(cadena, callback) {
-  const cadenaTransformada = cadena.toUpperCase(); // Convertir la cadena a majúscules
-  callback(cadenaTransformada); // Invocar el callback amb la cadena transformada
-}
+// function processarCadena(cadena, callback) {
+//   const cadenaTransformada = cadena.toUpperCase(); // Convertir la cadena a majúscules
+//   callback(cadenaTransformada); // Invocar el callback amb la cadena transformada
+// }
 
-function mostrarCadenaTransformada(cadena) {
-  console.log(`Cadena transformada: ${cadena}`);
-}
+// function mostrarCadenaTransformada(cadena) {
+//   console.log(`Cadena transformada: ${cadena}`);
+// }
 
-// Exemple d'ús
-const cadenaOriginal = 'la classe de react ha començat';
-processarCadena(cadenaOriginal, mostrarCadenaTransformada);
+// // Exemple d'ús
+// const cadenaOriginal = 'la classe de react ha començat';
+// processarCadena(cadenaOriginal, mostrarCadenaTransformada);
+
+
+
+// 1.4: Rest & Spread operators
+// NIVELL 1 
+
+// Exercici 1
+// Operador Spread en Arrays: Crea dues arrays, array1 i array2. Utilitza l'operador spread per a crear una tercera array 
+// que contingui tots els elements de array1 i array2.
+
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+
+// Utilitzant l'operador spread per a combinar array1 i array2
+let array3 = [...array1, ...array2];
+
+console.log(array3);
+
+// exercici 2 
+
+// Operador Rest en Funcions: Crea una funció 'suma' que utilitzi l'operador rest per a acceptar un nombre indeterminat
+//  d'arguments i retornar la seva suma.
+
+function suma(...numeros) {
+
+    return numeros.reduce((total, num) => total + num ,0);
+}
+console.log(suma(2, 3, 5 ));
 
