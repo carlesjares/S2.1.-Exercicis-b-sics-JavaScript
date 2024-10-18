@@ -188,22 +188,53 @@
 // Operador Spread en Arrays: Crea dues arrays, array1 i array2. Utilitza l'operador spread per a crear una tercera array 
 // que contingui tots els elements de array1 i array2.
 
-let array1 = [1, 2, 3];
-let array2 = [4, 5, 6];
+// let array1 = [1, 2, 3];
+// let array2 = [4, 5, 6];
 
-// Utilitzant l'operador spread per a combinar array1 i array2
-let array3 = [...array1, ...array2];
+// // Utilitzant l'operador spread per a combinar array1 i array2
+// let array3 = [...array1, ...array2];
 
-console.log(array3);
+// console.log(array3);
 
 // exercici 2 
 
 // Operador Rest en Funcions: Crea una funció 'suma' que utilitzi l'operador rest per a acceptar un nombre indeterminat
 //  d'arguments i retornar la seva suma.
 
-function suma(...numeros) {
+// function suma(...numeros) {
 
-    return numeros.reduce((total, num) => total + num ,0);
+//     return numeros.reduce((total, num) => total + num );
+// }
+// console.log(suma(1, 10, 22));
+
+
+// Nivell 2
+// Exercici 3
+// Copiant objectes amb Spread: Crea un objecte 'objecte1'. Després crea un segon objecte, 
+// 'objecte2', que sigui una còpia de 'objecte1' utilitzant l'operador spread.
+//  Canvia una propietat de 'objecte2' i comprova que 'objecte1' no ha canviat.
+
+const objecte1 = {
+  name: 'carles',
+  id: 1234,
+  product: 'barcelona activa',
+  exercici: 'copiant objectes'
 }
-console.log(suma(2, 3, 5 ));
+const objecte2 = {...objecte1}
+// Modifiquem una propietat de objecte2
+objecte2.exercici = 'modicacio objecte';
+console.log(objecte1,objecte2)
+
+
+// Exercici 4
+// Rest en Destructuring: Crea una array amb diversos elements. Utilitza destructuring i l'operador 
+// rest per a assignar els primers dos elements a variables, i després assignar la resta dels elements a una tercera variable.
+
+const numeros = [1, 2, 3, 4, 5, 6];
+
+const [primer, segon, ...rest] = numeros;
+
+console.log(primer);
+console.log(segon);
+console.log(rest);
 
