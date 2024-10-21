@@ -244,28 +244,71 @@
 // Spread en Funcions: Crea una funció que accepti tres arguments. Després, crea una array amb tres elements i 
 // crida la funció utilitzant l'operador spread amb aquesta array.
 
-function mostrarArguments(uno, dos, tres){
-  console.log(uno, dos, tres)
-}
-const array = [1, 2, 3];
+// function mostrarArguments(uno, dos, tres){
+//   console.log(uno, dos, tres)
+// }
+// const array = [1, 2, 3];
 
-mostrarArguments(...array)
+// mostrarArguments(...array)
 
-// Exercici 6
-// Fusionant Objectes amb Spread: Crea dos objectes amb propietats diferents. Utilitza l'operador spread per a fusionar
-//  aquests dos objectes en un de nou.
+// // Exercici 6
+// // Fusionant Objectes amb Spread: Crea dos objectes amb propietats diferents. Utilitza l'operador spread per a fusionar
+// //  aquests dos objectes en un de nou.
 
-const objecte1 = {
-  email: 'gfjksfsd@gmail.com',
-  empresa: 'barcelona activa',
+// const objecte1 = {
+//   email: 'gfjksfsd@gmail.com',
+//   empresa: 'barcelona activa',
  
-}
+// }
 
-const objecte2 = {
-  name: 'pepe',
-  id: 7654,
-  exercici: 'fusionar objectes'
-}
+// const objecte2 = {
+//   name: 'pepe',
+//   id: 7654,
+//   exercici: 'fusionar objectes'
+// }
 
-const fullobjecte = {...objecte1, ...objecte2};
-console.log(fullobjecte);
+// const fullobjecte = {...objecte1, ...objecte2};
+// console.log(fullobjecte);
+
+
+// Exercici 1.5: Array transformations
+
+// Nivell 1
+
+// Exercici 1
+// Map: Teniu un array de números [1, 2, 3, 4]. Crea una nova array que contingui el quadrat de cada número.
+
+let numeros = [1, 2, 3, 4];
+let quadrats = numeros.map(function(num) {
+  return num * num;
+});
+
+console.log(quadrats);
+
+// Exercici 2
+// Filter: Teniu una array de números [1, 2, 3, 4]. Crea una nova array que només contingui els números parells.
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+
+console.log(evenNumbers); 
+
+// Exercici 3
+// Find: Teniu una array de números [1, 10 , 8, 11]. Utilitza la funció find per a trobar el primer número que és major a 10.
+
+const array1 = [1, 10 , 8, 11];
+
+const numero = array1.find((element) => element > 10);
+
+console.log(numero);
+
+// Exercici 4
+// Reduce: Teniu una array de números [13, 7, 8, 21]. Fes servir la funció reduce per a calcular la suma total dels números.
+
+const suma= [13, 7, 8, 21].reduce(function (a, b){
+  return a + b;
+});
+
+console.log(suma)
+
