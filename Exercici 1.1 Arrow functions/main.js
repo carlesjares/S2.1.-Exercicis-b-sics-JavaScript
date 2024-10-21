@@ -325,12 +325,22 @@
 
 // - La funció ha de retornar el resultat de la suma.
 
-const resultat = arr => arr.filter(num => num >= 10).map(num => num * 2).reduce((acc, num) => acc + num, 0);
+// const resultat = arr => arr.filter(num => num >= 10).map(num => num * 2).reduce((acc, num) => acc + num, 0);
 
-const array = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
-console.log(resultat(array)); 
+// const array = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
+// console.log(resultat(array)); 
 
 // Nivell 3
 // Exercici 6
 // Every / Some: Usa every i some per a determinar si tots o alguns dels elements de l'array [11, 12, 13, 14] 
 // són majors que 10, respectivament
+
+let array = [11, 12, 13, 14];
+
+// Verificar si tots els elements són majors que 10
+let totsMajorsQue10 = array.every(num => num > 10);
+console.log(totsMajorsQue10); 
+
+// Verificar si algun element és major que 10
+let algunMajorQue10 = array.some(num => num > 10);
+console.log(algunMajorQue10); 
