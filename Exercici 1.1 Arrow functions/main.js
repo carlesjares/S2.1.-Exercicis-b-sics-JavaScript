@@ -335,12 +335,23 @@
 // Every / Some: Usa every i some per a determinar si tots o alguns dels elements de l'array [11, 12, 13, 14] 
 // són majors que 10, respectivament
 
-let array = [11, 12, 13, 14];
+// let array = [11, 12, 13, 14];
 
-// Verificar si tots els elements són majors que 10
-let totsMajorsQue10 = array.every(num => num > 10);
-console.log(totsMajorsQue10); 
+// // Verificar si tots els elements són majors que 10
+// let totsMajorsQue10 = array.every(num => num > 10);
+// console.log(totsMajorsQue10); 
 
-// Verificar si algun element és major que 10
-let algunMajorQue10 = array.some(num => num > 10);
-console.log(algunMajorQue10); 
+// // Verificar si algun element és major que 10
+// let algunMajorQue10 = array.some(num => num > 10);
+// console.log(algunMajorQue10); 
+
+// Exercici 1.6: Array loops
+// Nivell 1
+
+// Exercici 1
+// forEach: Teniu una array de noms. Utilitza forEach per a imprimir cada nom a la consola: let noms = ['Anna', 'Bernat', 'Clara'];
+
+let noms = ['Anna', 'Bernat', 'Clara'];
+
+noms.forEach((nom) => console.log(nom));
+
