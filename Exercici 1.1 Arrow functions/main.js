@@ -278,37 +278,59 @@
 // Exercici 1
 // Map: Teniu un array de números [1, 2, 3, 4]. Crea una nova array que contingui el quadrat de cada número.
 
-let numeros = [1, 2, 3, 4];
-let quadrats = numeros.map(function(num) {
-  return num * num;
-});
+// let numeros = [1, 2, 3, 4];
+// let quadrats = numeros.map(function(num) {
+//   return num * num;
+// });
 
-console.log(quadrats);
+// console.log(quadrats);
 
-// Exercici 2
-// Filter: Teniu una array de números [1, 2, 3, 4]. Crea una nova array que només contingui els números parells.
+// // Exercici 2
+// // Filter: Teniu una array de números [1, 2, 3, 4]. Crea una nova array que només contingui els números parells.
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const evenNumbers = numbers.filter(number => number % 2 === 0);
+// const evenNumbers = numbers.filter(number => number % 2 === 0);
 
-console.log(evenNumbers); 
+// console.log(evenNumbers); 
 
-// Exercici 3
-// Find: Teniu una array de números [1, 10 , 8, 11]. Utilitza la funció find per a trobar el primer número que és major a 10.
+// // Exercici 3
+// // Find: Teniu una array de números [1, 10 , 8, 11]. Utilitza la funció find per a trobar el primer número que és major a 10.
 
-const array1 = [1, 10 , 8, 11];
+// const array1 = [1, 10 , 8, 11];
 
-const numero = array1.find((element) => element > 10);
+// const numero = array1.find((element) => element > 10);
 
-console.log(numero);
+// console.log(numero);
 
-// Exercici 4
-// Reduce: Teniu una array de números [13, 7, 8, 21]. Fes servir la funció reduce per a calcular la suma total dels números.
+// // Exercici 4
+// // Reduce: Teniu una array de números [13, 7, 8, 21]. Fes servir la funció reduce per a calcular la suma total dels números.
 
-const suma= [13, 7, 8, 21].reduce(function (a, b){
-  return a + b;
-});
+// const suma= [13, 7, 8, 21].reduce(function (a, b){
+//   return a + b;
+// });
 
-console.log(suma)
+// console.log(suma)
 
+// Nivell 2
+
+// Exercici 5
+// Donat un array "[ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ]", crea una funció en una sola línia que faci el següent:
+
+// - Filtra els nombres majors o iguals a 10.
+
+// - Multiplica cada nombre filtrat per 2.
+
+// - Calcula la suma dels nombres filtrats i multiplicats per 2.
+
+// - La funció ha de retornar el resultat de la suma.
+
+const resultat = arr => arr.filter(num => num >= 10).map(num => num * 2).reduce((acc, num) => acc + num, 0);
+
+const array = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
+console.log(resultat(array)); 
+
+// Nivell 3
+// Exercici 6
+// Every / Some: Usa every i some per a determinar si tots o alguns dels elements de l'array [11, 12, 13, 14] 
+// són majors que 10, respectivament
