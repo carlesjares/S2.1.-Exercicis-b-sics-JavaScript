@@ -414,9 +414,52 @@
 // for-of amb index: Utilitza un bucle for-of per a imprimir a la consola cada element de 
 // l'array i la seva posició (index): let noms = ['Anna', 'Bernat', 'Clara']
 
-let noms = ['Anna', 'Bernat', 'Clara'];
+// let noms = ['Anna', 'Bernat', 'Clara'];
 
-for (const [index, nom] of noms.entries()) {
-    console.log(`Índex: ${index}, Nom: ${nom}`);
+// for (const [index, nom] of noms.entries()) {
+//     console.log(`Índex: ${index}, Nom: ${nom}`);
+// }
+
+// Exercici 1.7: Promises & Async/Await
+
+// Nivell 1
+
+// Exercici 1 i 2
+// Creació d'una Promesa: Crea una promesa que es resolgui després de 2 segons i que retorni 
+// la cadena de text 'Hola, món'.
+
+
+// const salutacio = new Promise((resolve) => {
+//     setTimeout(() => {
+//         resolve('Hola, mon');
+//     }, 2000);
+// });
+
+// salutacio.then((mensaje) => {
+//     console.log(mensaje); 
+// })
+
+// Exercici 3
+// Promesa amb reject: Crea una promesa que es resolgui després de 2 segons si l'input és igual
+//  a 'Hola', i que la rebutgi si l'input és qualsevol altra cosa.
+
+function checkInput(input) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (input === 'Hola') {
+                resolve('Promesa resuelta: la entrada es Hola');
+            } else {
+                reject('Promesa rechazada: la entrada no es Hola');
+            }
+        }, 2000); 
+    });
 }
 
+
+checkInput('Hola')
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+
+checkInput('Mon')
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
