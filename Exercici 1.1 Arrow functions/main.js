@@ -370,8 +370,27 @@
 // filter: Teniu una array de números. Utilitza filter per a crear una nova array que només contingui els números parells. 
 // let numeros = [1, 2, 3, 4, 5, 6];
 
-let numeros = [1, 2, 3, 4, 5, 6];
+// let numeros = [1, 2, 3, 4, 5, 6];
 
-let numerosParells = numeros.filter(num => num % 2 === 0);
+// let numerosParells = numeros.filter(num => num % 2 === 0);
 
-console.log(numerosParells);
+// console.log(numerosParells);
+
+
+// Nivell 2
+
+// Exercici 4
+// for-in: Teniu un objecte amb parells clau-valor: let obj = { nom: Ona, edat: 25, ciutat: 'Barcelona' };
+//  Utilitza un bucle for-in per a imprimir 
+// a la consola cada clau i el seu valor corresponent.
+
+let obj = {
+    nom : 'ona',
+    edat :  25,
+    ciutat : 'Barcelona'
+
+}
+
+for (let clau in obj) {
+    console.log(clau + " : " + obj[clau]);
+}
