@@ -399,12 +399,24 @@
 // for-of amb break: Teniu una array de números. Utilitza un bucle for-of per a imprimir a la consola
 //  els números fins a trobar el número 5, llavors atura el bucle: let numeros = [1, 2, 3, 4, 5, 6];
 
-let numeros = [1, 2, 3, 4, 5, 6] ;
+// let numeros = [1, 2, 3, 4, 5, 6] ;
 
-for (const numero of numeros){
-    if (numero === 5){
-        break;
+// for (const numero of numeros){
+//     if (numero === 5){
+//         break;
         
-    }
-    console.log(numero);
+//     }
+//     console.log(numero);
+// }
+
+// Nivell 3
+// Exercici 6
+// for-of amb index: Utilitza un bucle for-of per a imprimir a la consola cada element de 
+// l'array i la seva posició (index): let noms = ['Anna', 'Bernat', 'Clara']
+
+let noms = ['Anna', 'Bernat', 'Clara'];
+
+for (const [index, nom] of noms.entries()) {
+    console.log(`Índex: ${index}, Nom: ${nom}`);
 }
+
