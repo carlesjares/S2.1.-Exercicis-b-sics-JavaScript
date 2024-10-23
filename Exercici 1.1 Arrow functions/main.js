@@ -469,22 +469,73 @@
     // Ús de async/await: Escriu una funció asíncrona que utilitzi la funció await per a esperar el resultat de la promesa creada a
     //  l'exercici 1, i que després imprimeixi aquest resultat a la consola.
 
-function saluda() {
+// // Funció que crea la promesa
+// function saluda() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve('Hola, món');
+//         }, 2000); // 2 segons de retard
+//     });
+// }
+
+// // Funció asíncrona que espera el resultat de la promesa
+// async function mostrarSalutacio() {
+//     const resultat = await saluda(); // Espera la resolució de la promesa
+//     console.log(resultat); // Imprimeix el resultat a la consola
+// }
+
+// // Exemple d'ús
+// mostrarSalutacio();
+
+
+// Exercici 5
+// Gestió d'errors amb async/await: Modifica la funció de l'exercici 4 per a que capturi 
+// qualsevol possible error utilitzant un bloc try/catch.
+
+
+// function saluda() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve('Hola, món');
+//         }, 2000); 
+//     });
+// }
+
+
+// async function mostrarSalutacio() {
+//     try {
+//         const resultat = await saluda(); 
+//         console.log(resultat); 
+//     } catch (error) {
+//         console.error('Error:', error); 
+//     }
+// }
+
+// mostrarSalutacio();
+
+// Exercici 6
+// Promise.all: Crea dues promeses que es resolguin després de 2 i 3 segons, respectivament. 
+// Utilitza Promise.all per a esperar que ambdues promeses es resolguin,
+//  i imprimeix els resultats a la consola.
+
+
+function crearPromesa(durada, missatge) {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve('Hola, món');
-        }, 2000); 
+            resolve(missatge);
+        }, durada); 
     });
 }
 
 
-async function mostrarSalutacio() {
-    try {
-        const resultat = await saluda(); 
-        console.log(resultat); 
-    } catch (error) {
-        console.error('Error:', error); 
-    }
-}
+const promesa1 = crearPromesa(2000, 'Promesa 1 resolta després de 2 segons'); 
+const promesa2 = crearPromesa(3000, 'Promesa 2 resolta després de 3 segons'); 
 
-mostrarSalutacio();
+// Utilitzem Promise.all per esperar que ambdues promeses es resolguin
+Promise.all([promesa1, promesa2])
+    .then(resultats => {
+        console.log(resultats); 
+    })
+    .catch(error => {
+        console.error('Error:', error); 
+    });
