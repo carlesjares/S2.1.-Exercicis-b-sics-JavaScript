@@ -443,23 +443,48 @@
 // Promesa amb reject: Crea una promesa que es resolgui després de 2 segons si l'input és igual
 //  a 'Hola', i que la rebutgi si l'input és qualsevol altra cosa.
 
-function checkInput(input) {
-    return new Promise((resolve, reject) => {
+// function checkInput(input) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (input === 'Hola') {
+//                 resolve('Promesa resuelta: la entrada es Hola');
+//             } else {
+//                 reject('Promesa rechazada: la entrada no es Hola');
+//             }
+//         }, 2000); 
+//     });
+// }
+
+
+// checkInput('Hola')
+//     .then(result => console.log(result))
+//     .catch(error => console.error(error));
+
+// checkInput('Mon')
+//     .then(result => console.log(result))
+//     .catch(error => console.error(error));
+
+
+// Exercici 4
+    // Ús de async/await: Escriu una funció asíncrona que utilitzi la funció await per a esperar el resultat de la promesa creada a
+    //  l'exercici 1, i que després imprimeixi aquest resultat a la consola.
+
+function saluda() {
+    return new Promise((resolve) => {
         setTimeout(() => {
-            if (input === 'Hola') {
-                resolve('Promesa resuelta: la entrada es Hola');
-            } else {
-                reject('Promesa rechazada: la entrada no es Hola');
-            }
+            resolve('Hola, món');
         }, 2000); 
     });
 }
 
 
-checkInput('Hola')
-    .then(result => console.log(result))
-    .catch(error => console.error(error));
+async function mostrarSalutacio() {
+    try {
+        const resultat = await saluda(); 
+        console.log(resultat); 
+    } catch (error) {
+        console.error('Error:', error); 
+    }
+}
 
-checkInput('Mon')
-    .then(result => console.log(result))
-    .catch(error => console.error(error));
+mostrarSalutacio();
